@@ -1,0 +1,56 @@
+name: Bug report
+description: Something is drawn wrong, missing, or the game stutters
+labels: [bug]
+body:
+  - type: markdown
+    attributes:
+      value: |
+        Thanks for the report. Please fill in every field — a log line is worth more than a paragraph.
+  - type: input
+    id: versions
+    attributes:
+      label: Versions
+      description: SPT / EFT / BepInEx / this plugin
+      placeholder: SPT 4.1.6 · EFT 0.16.9.40743 · BepInEx 5.4.23.5 · Ballistics 1.0.0
+    validations:
+      required: true
+  - type: textarea
+    id: what
+    attributes:
+      label: What did you expect, and what happened instead?
+    validations:
+      required: true
+  - type: textarea
+    id: steps
+    attributes:
+      label: Steps to reproduce
+      placeholder: |
+        1. Enable Trajectory → BulletTrails
+        2. Fire one round of 5.45 BP through a wooden wall
+        3. ...
+    validations:
+      required: true
+  - type: dropdown
+    id: verbose
+    attributes:
+      label: Was Debug → VerboseLog enabled?
+      options:
+        - "No"
+        - "Yes"
+    validations:
+      required: true
+  - type: textarea
+    id: log
+    attributes:
+      label: BepInEx LogOutput.log
+      description: Attach the file, or paste the lines around "install done" and the first error.
+      render: text
+    validations:
+      required: false
+  - type: input
+    id: cfg
+    attributes:
+      label: Relevant config values
+      description: e.g. ColorBy = Off, GeometryDensity = 20, or attach the cfg
+    validations:
+      required: false

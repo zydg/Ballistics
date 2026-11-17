@@ -1,0 +1,23 @@
+name: Feature request
+description: Suggest a visualisation or a setting
+labels: [enhancement]
+body:
+  - type: textarea
+    id: idea
+    attributes:
+      label: What should it show?
+      description: Describe what the game already computes that you want to see on screen.
+    validations:
+      required: true
+  - type: textarea
+    id: why
+    attributes:
+      label: Why is it useful?
+    validations:
+      required: false
+  - type: markdown
+    attributes:
+      value: |
+        Note: this plugin only *replays and visualises* values the game has already produced.
+        Anything that depends on the game's random rolls (ricochet direction, pellet spread, fragments)
+        cannot be predicted and will not be implemented.

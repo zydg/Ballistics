@@ -1,0 +1,15 @@
+bin/
+obj/
+dist/
+pkg/
+*.dll
+*.bytes
+*.zip
+*.log
+Version.cs
+throwcache.txt
+out/
+LangEn.g.cs
+docs/preview/
+.env
+.env.*
